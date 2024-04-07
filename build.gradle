@@ -1,0 +1,61 @@
+//file:noinspection GroovyAssignabilityCheck
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'org.springframework.boot' version "$springBootVersion"
+    id 'io.spring.dependency-management' version "$dependencyManagementPluginVersion"
+}
+
+group = 'dev.temez'
+version = '0.1dev'
+
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+[compileJava, javadoc]*.options*.encoding = 'UTF-8'
+
+dependencies {
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+
+    api "org.jetbrains:annotations:$jetbrainsAnnotationsVersion"
+
+    compileOnly "org.springframework.boot:spring-boot-starter-web"
+}
+
+
+publishing {
+    repositories {
+        mavenLocal()
+    }
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifactId = project.name
+            groupId = project.group
+            version = project.version
+            pom {
+                description = 'Simple rest-handling library for Spring Framework'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'temez'
+                        name = 'Artem Invanov'
+                        email = 'temezf@gmail.com'
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
