@@ -1,4 +1,4 @@
-package dev.temez.restify.rest;
+package dev.temez.exceptify.rest;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;

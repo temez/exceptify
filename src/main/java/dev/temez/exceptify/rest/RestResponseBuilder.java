@@ -1,4 +1,4 @@
-package dev.temez.restify.rest;
+package dev.temez.exceptify.rest;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,7 +1,7 @@
-package dev.temez.restify.exception.registry;
+package dev.temez.exceptify.exception.registry;
 
-import dev.temez.restify.exception.adapter.ExceptionAdapter;
-import dev.temez.restify.exception.impl.AdapterRegistryException;
+import dev.temez.exceptify.exception.adapter.ExceptionAdapter;
+import dev.temez.exceptify.exception.impl.AdapterRegistryException;
 import org.jetbrains.annotations.NotNull;
 
 public interface ExceptionAdapterRegistry {

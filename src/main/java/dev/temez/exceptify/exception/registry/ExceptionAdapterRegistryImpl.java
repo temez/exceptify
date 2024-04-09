@@ -1,8 +1,8 @@
-package dev.temez.restify.exception.registry;
+package dev.temez.exceptify.exception.registry;
 
-import dev.temez.restify.annotation.RestifyExceptionAdapter;
-import dev.temez.restify.exception.adapter.ExceptionAdapter;
-import dev.temez.restify.exception.impl.AdapterRegistryException;
+import dev.temez.exceptify.annotation.ExceptifyExceptionAdapter;
+import dev.temez.exceptify.exception.adapter.ExceptionAdapter;
+import dev.temez.exceptify.exception.impl.AdapterRegistryException;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -49,8 +49,8 @@ public final class ExceptionAdapterRegistryImpl implements ExceptionAdapterRegis
       @NotNull ExceptionAdapter<?> exceptionAdapter
   ) throws AdapterRegistryException {
     Class<?> exceptionAdapterClass = exceptionAdapter.getClass();
-    RestifyExceptionAdapter exceptionAdapterAnnotation = exceptionAdapterClass
-        .getAnnotation(RestifyExceptionAdapter.class);
+    ExceptifyExceptionAdapter exceptionAdapterAnnotation = exceptionAdapterClass
+        .getAnnotation(ExceptifyExceptionAdapter.class);
 
     List<Class<? extends Exception>> exceptions = Arrays
         .stream(exceptionAdapterAnnotation.binding().value())

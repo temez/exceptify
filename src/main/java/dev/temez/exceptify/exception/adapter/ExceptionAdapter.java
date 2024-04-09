@@ -1,6 +1,6 @@
-package dev.temez.restify.exception.adapter;
+package dev.temez.exceptify.exception.adapter;
 
-import dev.temez.restify.rest.RestResponse;
+import dev.temez.exceptify.rest.RestResponse;
 import org.jetbrains.annotations.NotNull;
 
 public interface ExceptionAdapter<T extends Exception> {

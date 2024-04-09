@@ -1,4 +1,4 @@
-package dev.temez.restify.annotation;
+package dev.temez.exceptify.annotation;
 
 
 import java.lang.annotation.Documented;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Documented
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface RestifyExceptionAdapter {
+public @interface ExceptifyExceptionAdapter {
 
   @NotNull ExceptionBinding binding() default @ExceptionBinding;
 

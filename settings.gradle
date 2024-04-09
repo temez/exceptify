@@ -11,4 +11,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = 'restify'
+rootProject.name = 'exceptify'

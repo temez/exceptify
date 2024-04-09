@@ -1,7 +1,7 @@
-package dev.temez.restify.initializer;
+package dev.temez.exceptify.initializer;
 
-import dev.temez.restify.exception.adapter.ExceptionAdapter;
-import dev.temez.restify.exception.registry.ExceptionAdapterRegistry;
+import dev.temez.exceptify.exception.adapter.ExceptionAdapter;
+import dev.temez.exceptify.exception.registry.ExceptionAdapterRegistry;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.jetbrains.annotations.NotNull;
